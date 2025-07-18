@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Windows.RegistryEditor</RootNamespace>
+    <AssemblyName>RegistryEditor-v1.0.1</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources/app.ico</ApplicationIcon>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>Windows Advanced Registry Editor</Title>
+    <Authors>Kyle Crowder</Authors>
+    <Description>Advanced Windows Registry Editor</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>registry;change tracking;file watcher;advance search</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Controls\CheckBoxes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\Loader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Diagnostics.Tracing.TraceEvent" Version="3.1.23" />
+    <PackageReference Include="System.Management" Version="9.0.7" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="*" />
+  </ItemGroup>
+</Project>
