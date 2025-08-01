@@ -1,4 +1,5 @@
-﻿// Project Name: RegistryEditor
+﻿// Project Name: AdvancedRegistryEditor
+// Adapted  and expanded from https://github.com/giladreich/RegistryEditor
 // File Name: ProgressStartedArgs.cs
 // Author:  Kyle Crowder
 // Github:  OldSkoolzRoolz
@@ -11,9 +12,15 @@
 namespace Windows.RegistryEditor.Events;
 
 
+/// <summary>
+/// </summary>
 public class ProgressStartedArgs : ProgressArgs
 {
 
+    /// <summary>
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="hive"></param>
     public ProgressStartedArgs(string message, string hive) : base(message)
     {
         Hive = hive;
@@ -24,6 +31,8 @@ public class ProgressStartedArgs : ProgressArgs
 
 
 
+    /// <summary>
+    /// </summary>
     public string Hive { get; set; }
 
 }

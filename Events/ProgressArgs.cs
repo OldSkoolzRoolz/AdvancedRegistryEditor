@@ -1,4 +1,5 @@
-﻿// Project Name: RegistryEditor
+﻿// Project Name: AdvancedRegistryEditor
+// Adapted  and expanded from https://github.com/giladreich/RegistryEditor
 // File Name: ProgressArgs.cs
 // Author:  Kyle Crowder
 // Github:  OldSkoolzRoolz
@@ -8,20 +9,19 @@
 
 
 
-#region
+
 
 using System;
 
-#endregion
-
-
-
 namespace Windows.RegistryEditor.Events;
-
-
+/// <summary>
+/// </summary>
 public class ProgressArgs : EventArgs
 {
 
+    /// <summary>
+    /// </summary>
+    /// <param name="message"></param>
     public ProgressArgs(string message)
     {
         Message = message;
@@ -32,6 +32,8 @@ public class ProgressArgs : EventArgs
 
 
 
+    /// <summary>
+    /// </summary>
     public string Message { get; set; }
 
 }
